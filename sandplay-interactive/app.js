@@ -2,44 +2,45 @@
   "use strict";
 
   const ASSETS = [
-    ["person-child", "小孩", "人物", "assets/generated/person-child.png", "#b46b4f", 0.9, 0.45, 1.8],
-    ["person-adult", "成年人", "人物", "assets/generated/person-adult.png", "#9b6a54", 1.05, 0.55, 2.0],
-    ["person-family", "家庭三人组", "人物", "assets/generated/person-family.png", "#c07a55", 1.25, 0.65, 2.2],
-    ["animal-dog", "狗", "动物", "assets/generated/animal-dog.png", "#9a7654", 0.8, 0.35, 1.7],
-    ["animal-deer", "鹿", "动物", "assets/generated/animal-deer.png", "#a67845", 0.95, 0.45, 1.9],
-    ["animal-bird", "鸟", "动物", "assets/generated/animal-bird.png", "#6f91a2", 0.65, 0.25, 1.4],
-    ["animal-turtle", "乌龟", "动物", "assets/generated/animal-turtle.png", "#6f8752", 0.75, 0.3, 1.6],
-    ["nature-tree", "树", "自然", "assets/generated/nature-tree.png", "#4f8a5f", 1.45, 0.7, 2.5],
-    ["nature-flower", "花", "自然", "assets/generated/nature-flower.png", "#d27b61", 0.8, 0.35, 1.6],
-    ["nature-stone", "石头", "自然", "assets/generated/nature-stone.png", "#7f7a70", 0.75, 0.3, 1.8],
-    ["nature-mountain", "山", "自然", "assets/generated/nature-mountain.png", "#6d8d5c", 1.6, 0.8, 2.8],
-    ["nature-water", "河流/水池", "自然", "assets/generated/nature-water.png", "#4f91b4", 1.55, 0.75, 2.6],
-    ["building-house", "小屋", "建筑", "assets/generated/building-house.png", "#ad6f4b", 1.55, 0.75, 2.6],
-    ["building-tower", "高塔", "建筑", "assets/generated/building-tower.png", "#806e9b", 1.5, 0.75, 2.5],
-    ["building-castle", "城堡", "建筑", "assets/generated/building-castle.png", "#9c7854", 1.75, 0.85, 3.0],
-    ["building-door", "门", "建筑", "assets/generated/building-door.png", "#9b6a44", 1.2, 0.55, 2.2],
-    ["path-bridge", "桥", "道路/桥梁", "assets/generated/path-bridge.png", "#8c7356", 1.25, 0.6, 2.2],
-    ["path-road", "小路", "道路/桥梁", "assets/generated/path-road.png", "#b08a57", 1.5, 0.7, 2.6],
-    ["path-stairs", "阶梯", "道路/桥梁", "assets/generated/path-stairs.png", "#9a8467", 1.35, 0.65, 2.4],
-    ["boundary-fence", "栅栏", "边界/障碍", "assets/generated/boundary-fence.png", "#817868", 1.15, 0.5, 2.1],
-    ["boundary-stone-wall", "石墙", "边界/障碍", "assets/generated/boundary-stone-wall.png", "#817868", 1.3, 0.6, 2.3],
-    ["boundary-cave", "洞穴", "边界/障碍", "assets/generated/boundary-cave.png", "#7b725d", 1.5, 0.7, 2.6],
-    ["sky-sun", "太阳", "天体/天气", "assets/generated/sky-sun.png", "#d0a43d", 1.0, 0.4, 1.9],
-    ["sky-cloud", "云", "天体/天气", "assets/generated/sky-cloud.png", "#6f91a2", 1.15, 0.45, 2.0],
-    ["sky-moon", "月亮", "天体/天气", "assets/generated/sky-moon.png", "#d0a43d", 0.95, 0.4, 1.9],
-    ["sky-raindrop", "雨滴", "天体/天气", "assets/generated/sky-raindrop.png", "#5ca7b5", 0.75, 0.25, 1.6],
-    ["sky-star", "星星", "天体/天气", "assets/generated/sky-star.png", "#d0a43d", 0.85, 0.3, 1.7],
-    ["fantasy-dragon", "龙", "幻想/怪物", "assets/generated/fantasy-dragon.png", "#6d8d5c", 1.25, 0.55, 2.4],
-    ["fantasy-gentle-monster", "温和的小怪物", "幻想/怪物", "assets/generated/fantasy-gentle-monster.png", "#806e9b", 1.1, 0.5, 2.2],
-    ["emotion-heart", "心形", "情绪符号", "assets/generated/emotion-heart.png", "#c88382", 0.85, 0.3, 1.7],
-    ["emotion-lamp", "灯", "情绪符号", "assets/generated/emotion-lamp.png", "#d0a43d", 0.9, 0.35, 1.8],
-    ["emotion-empty-chair", "空椅子", "情绪符号", "assets/generated/emotion-empty-chair.png", "#9a7654", 0.9, 0.35, 1.8],
-  ].map(([id, name, category, path, color, defaultScale, minScale, maxScale]) => ({
+    ["person-child", "小孩", "人物", "assets/generated/person-child.png", "#b46b4f", 64, 1.0, 0.55, 1.7],
+    ["person-adult", "成年人", "人物", "assets/generated/person-adult.png", "#9b6a54", 74, 1.0, 0.6, 1.8],
+    ["person-family", "家庭三人组", "人物", "assets/generated/person-family.png", "#c07a55", 96, 1.0, 0.65, 2.0],
+    ["animal-dog", "狗", "动物", "assets/generated/animal-dog.png", "#9a7654", 58, 1.0, 0.45, 1.7],
+    ["animal-deer", "鹿", "动物", "assets/generated/animal-deer.png", "#a67845", 72, 1.0, 0.5, 1.9],
+    ["animal-bird", "鸟", "动物", "assets/generated/animal-bird.png", "#6f91a2", 48, 1.0, 0.35, 1.45],
+    ["animal-turtle", "乌龟", "动物", "assets/generated/animal-turtle.png", "#6f8752", 56, 1.0, 0.4, 1.6],
+    ["nature-tree", "树", "自然", "assets/generated/nature-tree.png", "#4f8a5f", 112, 1.0, 0.55, 2.35],
+    ["nature-flower", "花", "自然", "assets/generated/nature-flower.png", "#d27b61", 54, 1.0, 0.4, 1.65],
+    ["nature-stone", "石头", "自然", "assets/generated/nature-stone.png", "#7f7a70", 58, 1.0, 0.45, 1.8],
+    ["nature-mountain", "山", "自然", "assets/generated/nature-mountain.png", "#6d8d5c", 132, 1.0, 0.6, 2.6],
+    ["nature-water", "河流/水池", "自然", "assets/generated/nature-water.png", "#4f91b4", 130, 1.0, 0.6, 2.5],
+    ["building-house", "小屋", "建筑", "assets/generated/building-house.png", "#ad6f4b", 118, 1.0, 0.6, 2.4],
+    ["building-tower", "高塔", "建筑", "assets/generated/building-tower.png", "#806e9b", 108, 1.0, 0.6, 2.35],
+    ["building-castle", "城堡", "建筑", "assets/generated/building-castle.png", "#9c7854", 136, 1.0, 0.65, 2.7],
+    ["building-door", "门", "建筑", "assets/generated/building-door.png", "#9b6a44", 82, 1.0, 0.5, 2.0],
+    ["path-bridge", "桥", "道路/桥梁", "assets/generated/path-bridge.png", "#8c7356", 112, 1.0, 0.55, 2.25],
+    ["path-road", "小路", "道路/桥梁", "assets/generated/path-road.png", "#b08a57", 128, 1.0, 0.6, 2.5],
+    ["path-stairs", "阶梯", "道路/桥梁", "assets/generated/path-stairs.png", "#9a8467", 108, 1.0, 0.55, 2.25],
+    ["boundary-fence", "栅栏", "边界/障碍", "assets/generated/boundary-fence.png", "#817868", 96, 1.0, 0.5, 2.1],
+    ["boundary-stone-wall", "石墙", "边界/障碍", "assets/generated/boundary-stone-wall.png", "#817868", 108, 1.0, 0.55, 2.25],
+    ["boundary-cave", "洞穴", "边界/障碍", "assets/generated/boundary-cave.png", "#7b725d", 124, 1.0, 0.6, 2.45],
+    ["sky-sun", "太阳", "天体/天气", "assets/generated/sky-sun.png", "#d0a43d", 78, 1.0, 0.45, 1.9],
+    ["sky-cloud", "云", "天体/天气", "assets/generated/sky-cloud.png", "#6f91a2", 92, 1.0, 0.45, 2.0],
+    ["sky-moon", "月亮", "天体/天气", "assets/generated/sky-moon.png", "#d0a43d", 72, 1.0, 0.4, 1.85],
+    ["sky-raindrop", "雨滴", "天体/天气", "assets/generated/sky-raindrop.png", "#5ca7b5", 46, 1.0, 0.3, 1.55],
+    ["sky-star", "星星", "天体/天气", "assets/generated/sky-star.png", "#d0a43d", 52, 1.0, 0.3, 1.6],
+    ["fantasy-dragon", "龙", "幻想/怪物", "assets/generated/fantasy-dragon.png", "#6d8d5c", 116, 1.0, 0.55, 2.4],
+    ["fantasy-gentle-monster", "温和的小怪物", "幻想/怪物", "assets/generated/fantasy-gentle-monster.png", "#806e9b", 82, 1.0, 0.5, 2.0],
+    ["emotion-heart", "心形", "情绪符号", "assets/generated/emotion-heart.png", "#c88382", 56, 1.0, 0.35, 1.6],
+    ["emotion-lamp", "灯", "情绪符号", "assets/generated/emotion-lamp.png", "#d0a43d", 58, 1.0, 0.35, 1.7],
+    ["emotion-empty-chair", "空椅子", "情绪符号", "assets/generated/emotion-empty-chair.png", "#9a7654", 62, 1.0, 0.4, 1.75],
+  ].map(([id, name, category, path, color, baseSize, defaultScale, minScale, maxScale]) => ({
     id,
     name,
     category,
     path,
     color,
+    baseSize,
     defaultScale,
     minScale,
     maxScale,
@@ -262,6 +263,8 @@
       node.dataset.id = object.id;
       node.style.left = `${object.x}px`;
       node.style.top = `${object.y}px`;
+      node.style.width = `${objectBaseSize(object)}px`;
+      node.style.height = `${objectBaseSize(object)}px`;
       node.style.zIndex = String(object.z);
       node.style.transform = transformFor(object);
       node.setAttribute("aria-label", object.label);
@@ -353,6 +356,7 @@
       category: asset.category,
       path: asset.path,
       color: asset.color,
+      baseSize: asset.baseSize || OBJECT_BASE_SIZE,
       x,
       y,
       scale: asset.defaultScale || 1,
@@ -559,7 +563,7 @@
     try {
       const images = await Promise.all(objects.map((object) => loadExportImage(object)));
       objects.forEach((object, index) => {
-        const size = OBJECT_BASE_SIZE * object.scale * Math.min(sx, sy);
+        const size = objectRenderSize(object) * Math.min(sx, sy);
         ctx.save();
         ctx.translate(object.x * sx, object.y * sy);
         ctx.rotate((object.rotation * Math.PI) / 180);
@@ -595,8 +599,8 @@
         category: object.category,
         x: Math.round(object.x),
         y: Math.round(object.y),
-        width: Math.round(76 * object.scale),
-        height: Math.round(76 * object.scale),
+        width: Math.round(objectRenderSize(object)),
+        height: Math.round(objectRenderSize(object)),
         rotation: object.rotation,
         zIndex: object.z,
         flipped: object.flipped,
@@ -651,8 +655,8 @@
           category: object.category,
           x: Math.round(object.x),
           y: Math.round(object.y),
-          width: Math.round(76 * object.scale),
-          height: Math.round(76 * object.scale),
+          width: Math.round(objectRenderSize(object)),
+          height: Math.round(objectRenderSize(object)),
           rotation: object.rotation,
           zIndex: object.z,
           flipped: object.flipped,
@@ -715,6 +719,14 @@
     return ASSETS.find((asset) => asset.id === id) || ASSETS[0];
   }
 
+  function objectBaseSize(object) {
+    return object.baseSize || assetById(object.assetId).baseSize || OBJECT_BASE_SIZE;
+  }
+
+  function objectRenderSize(object) {
+    return objectBaseSize(object) * object.scale;
+  }
+
   function transformFor(object) {
     const flip = object.flipped ? -1 : 1;
     return `translate(-50%, -50%) rotate(${object.rotation}deg) scale(${flip * object.scale}, ${object.scale})`;
@@ -770,7 +782,10 @@
   }
 
   function exportAssetPath(item) {
-    if (window.location.protocol === "file:") return fallbackSvg(item);
+    const id = item.assetId || item.id;
+    if (window.location.protocol === "file:" && window.SANDPLAY_ASSET_DATA?.[id]) {
+      return window.SANDPLAY_ASSET_DATA[id];
+    }
     return assetPath(item) || fallbackSvg(item);
   }
 

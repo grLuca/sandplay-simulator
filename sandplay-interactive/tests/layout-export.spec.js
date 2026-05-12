@@ -123,6 +123,27 @@ test("asset cards keep the same size across category filters", async ({ page }) 
   expect(singleCategory.scrollbarGutter).toContain("stable");
 });
 
+test("sand objects use asset-specific base sizes and scale ranges", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await enterApp(page);
+
+  await page.locator(".asset-card").nth(5).click();
+  const birdMax = await page.locator("#scaleControl").getAttribute("max");
+  await page.locator(".asset-card").nth(14).click();
+  const castleMax = await page.locator("#scaleControl").getAttribute("max");
+
+  const sizes = await page.locator(".sand-object").evaluateAll((nodes) => {
+    return nodes.map((node) => ({
+      width: Math.round(Number.parseFloat(getComputedStyle(node).width)),
+      height: Math.round(Number.parseFloat(getComputedStyle(node).height)),
+    }));
+  });
+
+  expect(sizes[0].width).toBeLessThan(sizes[1].width);
+  expect(sizes[0].height).toBeLessThan(sizes[1].height);
+  expect(birdMax).not.toBe(castleMax);
+});
+
 test("frontend design pass applies tactile workbench styling", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await enterApp(page);
@@ -187,4 +208,41 @@ test("save PNG produces a downloadable PNG file", async ({ page }, testInfo) => 
   expect(download.suggestedFilename()).toMatch(/^sandplay-\d{8}-\d{6}\.png$/);
   expect(bytes.length).toBeGreaterThan(1000);
   expect(bytes.subarray(0, 8).toString("hex")).toBe("89504e470d0a1a0a");
+});
+
+test("save PNG loads real asset images instead of fallback placeholders", async ({ page }, testInfo) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await enterApp(page);
+
+  await page.locator(".asset-card").nth(7).click();
+  await page.evaluate(() => {
+    window.__exportImageSources = [];
+    window.__captureExportSources = true;
+    if (window.__imageSourcePatchInstalled) return;
+
+    const descriptor = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, "src");
+    Object.defineProperty(HTMLImageElement.prototype, "src", {
+      configurable: true,
+      get() {
+        return descriptor.get.call(this);
+      },
+      set(value) {
+        if (window.__captureExportSources) {
+          window.__exportImageSources.push(String(value));
+        }
+        descriptor.set.call(this, value);
+      },
+    });
+    window.__imageSourcePatchInstalled = true;
+  });
+
+  const downloadPromise = page.waitForEvent("download");
+  await page.locator("#savePngBtn").click();
+  const download = await downloadPromise;
+  const outputPath = path.join(testInfo.outputDir, download.suggestedFilename());
+  await download.saveAs(outputPath);
+
+  const sources = await page.evaluate(() => window.__exportImageSources);
+  expect(sources.some((source) => source.startsWith("data:image/png;base64,") || source.includes("/assets/generated/nature-tree.png"))).toBeTruthy();
+  expect(sources.some((source) => source.startsWith("data:image/svg+xml"))).toBeFalsy();
 });
