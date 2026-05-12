@@ -99,6 +99,30 @@ test("asset library keeps a two-column grid", async ({ page }) => {
   expect(columns).toBe(2);
 });
 
+test("asset cards keep the same size across category filters", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await enterApp(page);
+
+  const measure = async () => page.locator(".asset-card").first().evaluate((card) => {
+    const grid = document.querySelector(".asset-grid");
+    const rect = card.getBoundingClientRect();
+    return {
+      width: Math.round(rect.width),
+      height: Math.round(rect.height),
+      scrollbarGutter: getComputedStyle(grid).scrollbarGutter,
+    };
+  });
+
+  const allCategory = await measure();
+  await page.locator(".category-tabs button").nth(1).click();
+  const singleCategory = await measure();
+
+  expect(singleCategory.width).toBe(allCategory.width);
+  expect(singleCategory.height).toBe(allCategory.height);
+  expect(allCategory.scrollbarGutter).toContain("stable");
+  expect(singleCategory.scrollbarGutter).toContain("stable");
+});
+
 test("frontend design pass applies tactile workbench styling", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await enterApp(page);
