@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="mountain placeholder">
+  <rect width="120" height="120" rx="18" fill="#edf0e6"/>
+  <ellipse cx="60" cy="96" rx="43" ry="8" fill="#bbb49e" opacity=".45"/>
+  <path d="M16 91l33-57 24 57z" fill="#9aa495"/>
+  <path d="M46 91l29-45 30 45z" fill="#7f928a"/>
+  <path d="M49 34l-9 16 11-4 8 9zM75 46l-8 13 9-3 7 7z" fill="#f4f1e7" opacity=".9"/>
+</svg>

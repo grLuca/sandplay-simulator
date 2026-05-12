@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="house placeholder">
+  <rect width="120" height="120" rx="18" fill="#f2eadf"/>
+  <ellipse cx="60" cy="98" rx="42" ry="9" fill="#cab79d" opacity=".45"/>
+  <path d="M28 56l32-29 32 29v40H28z" fill="#d8bd92"/>
+  <path d="M20 59l40-37 40 37" fill="none" stroke="#9b6f5e" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="52" y="70" width="17" height="26" rx="3" fill="#8f9f9a"/>
+  <rect x="35" y="65" width="14" height="12" rx="2" fill="#f4dfac"/>
+  <rect x="73" y="65" width="14" height="12" rx="2" fill="#f4dfac"/>
+</svg>

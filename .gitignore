@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Test and browser automation artifacts
+test-results/
+**/test-results/
+playwright-report/
+**/playwright-report/
+.playwright-mcp/
+
+# Local agent/runtime metadata
+.agents/
+**/.agents/
+skills-lock.json
+**/skills-lock.json
+start_prompt.md
+**/docs/superpowers/
+
+# Local environment and secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

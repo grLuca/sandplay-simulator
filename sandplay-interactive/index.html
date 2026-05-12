@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>心理沙盘互动体验</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%232f6f6d'/%3E%3Cpath d='M7 22h18c-2-5-5-8-9-8s-7 3-9 8z' fill='%23ead19b'/%3E%3Ccircle cx='21' cy='10' r='4' fill='%23f7d995'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="./styles.css?v=20260511-light-guide">
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar" aria-label="顶部工具栏">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <h1>心理沙盘互动体验</h1>
+            <p>本地创作，不自动上传</p>
+          </div>
+        </div>
+        <nav class="toolbar" aria-label="沙盘操作">
+          <button type="button" class="tool-button" id="undoBtn" title="撤销">撤销</button>
+          <button type="button" class="tool-button" id="redoBtn" title="重做">重做</button>
+          <button type="button" class="tool-button danger-soft" id="resetBtn" title="重置沙盘">重置</button>
+          <span class="toolbar-divider" aria-hidden="true"></span>
+          <button type="button" class="tool-button" id="savePngBtn" title="保存 PNG 截图">保存 PNG</button>
+          <button type="button" class="tool-button" id="exportJsonBtn" title="导出 JSON">导出 JSON</button>
+          <button type="button" class="tool-button primary" id="copyAgentBtn" title="复制给分析 Agent 的文本">复制给分析 Agent</button>
+        </nav>
+      </header>
+
+      <main class="workspace">
+        <aside class="panel library-panel" aria-label="沙具库">
+          <div class="panel-header">
+            <h2>沙具库</h2>
+            <span id="assetCount">0 件</span>
+          </div>
+          <label class="search-field">
+            <span>搜索</span>
+            <input id="assetSearch" type="search" placeholder="山、桥、人物、房子..." autocomplete="off">
+          </label>
+          <div class="category-tabs" id="categoryTabs" role="list" aria-label="分类筛选"></div>
+          <div class="asset-grid" id="assetGrid" aria-live="polite"></div>
+        </aside>
+
+        <section class="sand-section" aria-label="中央沙盘">
+          <div class="tray-header">
+            <div>
+              <h2>中央沙盘</h2>
+              <p id="trayHint">点击沙具或拖拽到沙盘中。选中对象后可移动、调整和复制。</p>
+            </div>
+            <div class="tray-meta" id="trayMeta">0 个对象</div>
+          </div>
+          <div class="sand-tray-wrap">
+            <div class="sand-tray" id="sandTray" tabindex="0" aria-label="沙盘画布，拖入或点击添加对象">
+              <div class="tray-empty" id="trayEmpty">
+                <strong>从左侧选择沙具开始</strong>
+                <span>作品只保留在本地浏览器，除非你主动保存、导出或复制文本。</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="panel inspector-panel" aria-label="作品和对象属性">
+          <section class="inspector-section">
+            <div class="panel-header">
+              <h2>作品</h2>
+              <span id="privacyBadge">本地</span>
+            </div>
+            <label class="field">
+              <span>作品标题</span>
+              <input id="sceneTitle" type="text" maxlength="48" value="我的沙盘">
+            </label>
+            <label class="field">
+              <span>当前心情</span>
+              <select id="sceneMood">
+                <option>平静</option>
+                <option>好奇</option>
+                <option>紧张</option>
+                <option>疲惫</option>
+                <option>开心</option>
+                <option>迷茫</option>
+                <option>其他</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>关键词</span>
+              <input id="sceneKeywords" type="text" maxlength="120" placeholder="例如：桥、远方、保护，可以用逗号分隔">
+            </label>
+            <label class="field">
+              <span>自述文本</span>
+              <textarea id="selfNarrative" rows="5" placeholder="可以写下这个场景发生了什么、你最注意到什么、哪个物件最重要。"></textarea>
+            </label>
+            <div class="scene-summary" id="sceneSummary">尚未添加对象。</div>
+          </section>
+
+          <section class="inspector-section guide-section">
+            <div class="panel-header">
+              <h2>没有方向时</h2>
+              <span id="guideBadge">可选</span>
+            </div>
+            <p class="guide-intro">不用解释作品。可以先从一个温和问题开始，摆一摆，再写一句你看到的。</p>
+            <div class="guide-prompt" id="guidePrompt">可以先放一个代表“现在的我”的物件。</div>
+            <div class="guide-actions" aria-label="引导提示">
+              <button type="button" data-guide-prompt="可以先放一个代表“现在的我”的物件。">现在的我</button>
+              <button type="button" data-guide-prompt="可以找一个像是“支持”或“资源”的物件。">支持资源</button>
+              <button type="button" data-guide-prompt="可以摆出一个边界：它是保护、距离，还是只是一个分隔？">边界</button>
+              <button type="button" data-guide-prompt="如果这个场景继续发展，下一步可能发生什么？">下一步</button>
+            </div>
+            <button type="button" class="guide-random" id="guideRandomBtn">换一个提示</button>
+            <label class="field">
+              <span>我的一句观察</span>
+              <textarea id="guideNote" rows="3" maxlength="240" placeholder="例如：我注意到桥在中间，房子离人物有一点距离。"></textarea>
+            </label>
+          </section>
+
+          <section class="inspector-section">
+            <div class="panel-header">
+              <h2>对象属性</h2>
+              <span id="selectionBadge">未选择</span>
+            </div>
+            <div class="empty-selection" id="emptySelection">
+              选择沙盘中的对象后，可以调整大小、旋转、翻转、复制、删除和层级。
+            </div>
+            <div class="object-editor" id="objectEditor" hidden>
+              <label class="field">
+                <span>名称</span>
+                <input id="objectLabel" type="text" maxlength="40">
+              </label>
+              <label class="range-field">
+                <span>大小 <output id="scaleValue">100%</output></span>
+                <input id="scaleControl" type="range" min="40" max="220" step="5">
+              </label>
+              <label class="range-field">
+                <span>旋转 <output id="rotationValue">0°</output></span>
+                <input id="rotationControl" type="range" min="-180" max="180" step="5">
+              </label>
+              <label class="toggle-field">
+                <input id="flipControl" type="checkbox">
+                <span>水平翻转</span>
+              </label>
+              <div class="button-grid">
+                <button type="button" id="duplicateBtn">复制</button>
+                <button type="button" id="deleteBtn" class="danger-soft">删除</button>
+                <button type="button" id="bringTopBtn">置顶</button>
+                <button type="button" id="sendBottomBtn">置底</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="inspector-section object-list-section">
+            <div class="panel-header">
+              <h2>对象列表</h2>
+              <span id="listCount">0</span>
+            </div>
+            <div class="object-list" id="objectList"></div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="welcomeModal" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle">
+      <section class="welcome-card">
+        <h2 id="welcomeTitle">欢迎来到心理沙盘互动体验</h2>
+        <p>
+          这是一个用于自我表达和整理思绪的本地互动工具，不是心理诊断、治疗服务或医疗建议。
+        </p>
+        <ul>
+          <li>你的作品不会自动上传，也不会自动发送给任何服务。</li>
+          <li>保存 PNG、导出 JSON、复制文本都需要你主动点击。</li>
+          <li>如果你正处于自伤、伤人或严重危机中，请立即联系当地紧急服务或可信赖的专业支持。</li>
+        </ul>
+        <label class="toggle-field consent-line">
+          <input id="safetyConsent" type="checkbox">
+          <span>我理解这是本地自我表达工具，不替代专业支持。</span>
+        </label>
+        <div class="safety-details" id="safetyDetails" hidden>
+          <p>本工具不是心理诊断、心理治疗或医疗建议工具。若你正在经历自伤、伤人、强烈痛苦或危机风险，请尽快联系当地紧急服务、危机热线、专业心理工作者或身边可信任的人。</p>
+          <p>沙盘截图和文字默认只在本地浏览器中处理，不会自动上传。你需要主动保存截图，并自行决定是否提交给分析 Agent。</p>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="viewSafetyBtn">查看安全说明</button>
+          <button type="button" class="primary modal-action" id="startBtn" disabled>开始体验</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="./app.js?v=20260511-light-guide"></script>
+  </body>
+</html>
