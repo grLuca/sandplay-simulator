@@ -123,13 +123,28 @@ test("asset cards keep the same size across category filters", async ({ page }) 
   expect(singleCategory.scrollbarGutter).toContain("stable");
 });
 
+test("asset library thumbnails are large enough for generated miniatures", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await enterApp(page);
+
+  const imageBox = await page.locator(".asset-card img").first().boundingBox();
+
+  expect(Math.round(imageBox.width)).toBeGreaterThanOrEqual(94);
+  expect(Math.round(imageBox.height)).toBeGreaterThanOrEqual(82);
+});
+
 test("sand objects use asset-specific base sizes and scale ranges", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await enterApp(page);
 
-  await page.locator(".asset-card").nth(5).click();
+  const birdIndex = await page.evaluate(() => window.SandplayApp.manifest.findIndex((asset) => asset.id === "animal-bird"));
+  const castleIndex = await page.evaluate(() => window.SandplayApp.manifest.findIndex((asset) => asset.id === "building-castle"));
+
+  await page.locator(".asset-card").nth(birdIndex).click();
+  const birdMin = await page.locator("#scaleControl").getAttribute("min");
   const birdMax = await page.locator("#scaleControl").getAttribute("max");
-  await page.locator(".asset-card").nth(14).click();
+  await page.locator(".asset-card").nth(castleIndex).click();
+  const castleMin = await page.locator("#scaleControl").getAttribute("min");
   const castleMax = await page.locator("#scaleControl").getAttribute("max");
 
   const sizes = await page.locator(".sand-object").evaluateAll((nodes) => {
@@ -142,6 +157,12 @@ test("sand objects use asset-specific base sizes and scale ranges", async ({ pag
   expect(sizes[0].width).toBeLessThan(sizes[1].width);
   expect(sizes[0].height).toBeLessThan(sizes[1].height);
   expect(birdMax).not.toBe(castleMax);
+  expect({ birdMin, birdMax, castleMin, castleMax }).toEqual({
+    birdMin: "25",
+    birdMax: "320",
+    castleMin: "40",
+    castleMax: "360",
+  });
 });
 
 test("frontend design pass applies tactile workbench styling", async ({ page }) => {
@@ -245,4 +266,43 @@ test("save PNG loads real asset images instead of fallback placeholders", async 
   const sources = await page.evaluate(() => window.__exportImageSources);
   expect(sources.some((source) => source.startsWith("data:image/png;base64,") || source.includes("/assets/generated/nature-tree.png"))).toBeTruthy();
   expect(sources.some((source) => source.startsWith("data:image/svg+xml"))).toBeFalsy();
+});
+
+test("copy full prompt combines user submission text with agent skill instructions", async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await enterApp(page);
+
+  await page.evaluate(() => {
+    window.__copiedText = "";
+    Object.defineProperty(navigator, "clipboard", {
+      configurable: true,
+      value: {
+        writeText: async (text) => {
+          window.__copiedText = text;
+        },
+      },
+    });
+    document.execCommand = (command) => {
+      if (command !== "copy") return false;
+      window.__copiedText = document.activeElement?.value || "";
+      return true;
+    };
+  });
+
+  await page.locator("#sceneTitle").fill("梦里的桥");
+  await page.locator("#sceneTitle").dispatchEvent("change");
+  await page.locator("#selfNarrative").fill("我把桥放在中间，旁边有一条路。");
+  await page.locator("#selfNarrative").dispatchEvent("change");
+  await page.locator("#copyFullPromptBtn").click();
+  await page.waitForFunction(() => window.__copiedText.includes("【Agent Skill 内容】"));
+
+  const copiedText = await page.evaluate(() => window.__copiedText);
+  expect(copiedText).toContain("【Agent Skill 内容】");
+  expect(copiedText).toContain("sandplay-reflection-analyst");
+  expect(copiedText).toContain("# 角色");
+  expect(copiedText).toContain("【用户提交内容】");
+  expect(copiedText).toContain("梦里的桥");
+  expect(copiedText).toContain("我把桥放在中间");
+  expect(copiedText).not.toContain("可选布局 JSON 摘要");
+  expect(copiedText).not.toContain('"objects"');
 });

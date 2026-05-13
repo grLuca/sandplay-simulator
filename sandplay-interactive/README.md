@@ -27,7 +27,7 @@ python -m http.server 8000
 - 中央虚拟沙盘，支持选中、移动、键盘微调和触控指针操作。
 - 对象属性：名称、类别、位置、大小、旋转、层级、水平翻转。
 - 对象操作：缩放、旋转、翻转、复制、删除、置顶、置底。
-- 顶部工具栏：撤销、重做、重置、保存 PNG、导出 JSON、复制分析 Agent 文本。
+- 顶部工具栏：撤销、重做、重置、保存 PNG、导出 JSON、复制分析 Agent 文本、复制完整提示词。
 - 右侧作品信息：作品标题、当前心情、关键词、自述文本。
 - 轻量引导面板：在用户没有方向时提供一个温和起点和一句观察记录。
 - PNG 截图只导出沙盘区域。
@@ -43,7 +43,8 @@ python -m http.server 8000
 1. 使用 `imagegen-prompts/style-guide.md` 中的统一风格要求生成透明背景 PNG。
 2. 将生成的资源放入 `assets/generated/` 或新的资源包目录。
 3. 更新 `assets/manifest.json` 中对应物件的 `placeholderSrc`。
-4. 如需让前端直接使用更多正式资源，可在 `app.js` 的 `ASSETS` 数组中增加条目或改为加载 manifest。
+4. 需要批量补图时，按 `imagegen-prompts/supplement-generation-batches.json` 或同名 Markdown 文件中的 16 个一批执行。
+5. 如需让前端直接使用更多正式资源，可在 `app.js` 的 `ASSETS` 数组中增加条目或改为加载 manifest。
 
 ## 保存截图
 
@@ -67,9 +68,10 @@ sandplay-YYYYMMDD-HHMMSS.png
 - 希望分析 Agent 关注的方向
 - 安全边界
 - 截图需由用户主动上传的说明
-- 可选布局 JSON 摘要
 
 用户需要自行将截图和文本提交给预设分析 Agent Skill。网页不会自动发送给任何服务。
+
+点击 `复制完整提示词` 后，应用会复制上述用户提交内容，并追加 `agent-skill/sandplay-analysis-agent-prompt.md` 的完整 Agent Skill 内容，方便直接粘贴到网页端使用。通过静态服务打开页面时会优先读取该 Markdown 文件；直接打开 `index.html` 时会使用前端内置的同版内容。
 
 ## 安全与隐私说明
 
@@ -82,7 +84,7 @@ sandplay-YYYYMMDD-HHMMSS.png
 
 ## 已知限制
 
-- 当前前端使用 32 个 ImageGen PNG 沙具；`assets/manifest.json` 已覆盖完整 44 个物件规划，其中未在前端展示的物件仍待继续生成正式 PNG。
+- 当前前端使用 32 个 ImageGen PNG 沙具；`assets/manifest.json` 已扩展到 96 个物件规划，其中新增与未生成物件按 4 批、每批 16 个在 `imagegen-prompts/supplement-generation-batches.*` 中管理。
 - 不同沙具已有不同默认尺寸和缩放范围，例如树、山、房屋、城堡会比人物更大，鸟、灯、心形等会更小。
 - 选中沙盘对象后，可在沙盘区域使用鼠标滚轮缩放；按住 Shift 滚动会使用更细的缩放步进。
 - 前端内置了一组可用沙具；后续可改为动态加载完整 manifest。

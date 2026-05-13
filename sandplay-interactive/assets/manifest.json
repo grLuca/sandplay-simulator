@@ -18,10 +18,18 @@
     "generatedBy": "OpenAI ImageGen built-in tool; sliced from generated sandplay asset atlas with chroma-key transparency removal"
   },
   {
+    "id": "person-woman",
+    "name": "成年人",
+    "category": "人物",
+    "placeholderSrc": "assets/generated/person-woman.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: an adult woman figure standing calmly, neutral warm clothing, simple facial features, open and balanced posture, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予女性角色、母亲、伴侣、自我形象、照顾或其他个人意义。"
+  },
+  {
     "id": "person-elder",
     "name": "老人",
     "category": "人物",
-    "placeholderSrc": "assets/placeholders/person.svg",
+    "placeholderSrc": "assets/generated/person-elder.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: an elderly person figure with gentle posture and simple warm clothing, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予经验、时间、照看、祖辈关系或其他个人意义。"
   },
@@ -29,7 +37,7 @@
     "id": "person-family-three",
     "name": "家庭三人组",
     "category": "人物",
-    "placeholderSrc": "assets/generated/person-family.png",
+    "placeholderSrc": "assets/generated/person-family-three.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small group of three family figures standing close together, simple facial features, neutral expressions, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予家庭、连接、距离、支持或其他个人意义。",
     "generatedBy": "OpenAI ImageGen built-in tool; sliced from generated sandplay asset atlas with chroma-key transparency removal"
@@ -38,7 +46,7 @@
     "id": "person-traveler",
     "name": "远行者",
     "category": "人物",
-    "placeholderSrc": "assets/placeholders/person.svg",
+    "placeholderSrc": "assets/generated/person-traveler.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a traveler figure with a small backpack and walking stick, calm neutral expression, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予探索、离开、寻找、转变或其他个人意义。"
   },
@@ -46,7 +54,7 @@
     "id": "animal-cat",
     "name": "猫",
     "category": "动物",
-    "placeholderSrc": "assets/placeholders/animal.svg",
+    "placeholderSrc": "assets/generated/animal-cat.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small sitting cat with soft rounded shape and relaxed tail, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予陪伴、独立、柔软、警觉或其他个人意义。"
   },
@@ -171,7 +179,7 @@
     "id": "building-wall",
     "name": "围墙",
     "category": "建筑",
-    "placeholderSrc": "assets/placeholders/stone.svg",
+    "placeholderSrc": "assets/generated/building-wall.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a short curved wall segment made of warm stone blocks, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予围合、保护、分隔、限制或其他个人意义。"
   },
@@ -206,7 +214,7 @@
     "id": "path-crossroads",
     "name": "十字路口",
     "category": "道路/桥梁",
-    "placeholderSrc": "assets/placeholders/bridge.svg",
+    "placeholderSrc": "assets/generated/path-crossroads.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a miniature crossroads with four soft sand paths meeting in the center, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予选择、交汇、方向、犹豫或其他个人意义。"
   },
@@ -241,7 +249,7 @@
     "id": "boundary-lock",
     "name": "锁",
     "category": "边界/障碍",
-    "placeholderSrc": "assets/placeholders/stone.svg",
+    "placeholderSrc": "assets/generated/boundary-lock.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small old-fashioned lock with rounded shape and warm muted metal color, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予保留、限制、秘密、安全或其他个人意义。"
   },
@@ -249,7 +257,7 @@
     "id": "boundary-maze",
     "name": "迷宫",
     "category": "边界/障碍",
-    "placeholderSrc": "assets/placeholders/stone.svg",
+    "placeholderSrc": "assets/generated/boundary-maze.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small simple maze made of low rounded walls, visible from above, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予寻找、复杂、困惑、探索或其他个人意义。"
   },
@@ -320,7 +328,7 @@
     "id": "fantasy-spirit",
     "name": "精灵",
     "category": "幻想/怪物",
-    "placeholderSrc": "assets/placeholders/monster.svg",
+    "placeholderSrc": "assets/generated/fantasy-spirit.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small gentle forest spirit with leaf-like cloak and soft glow, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予灵感、陪伴、自然力量、轻盈或其他个人意义。"
   },
@@ -328,7 +336,7 @@
     "id": "fantasy-mask",
     "name": "面具",
     "category": "幻想/怪物",
-    "placeholderSrc": "assets/placeholders/monster.svg",
+    "placeholderSrc": "assets/generated/fantasy-mask.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a simple decorative mask with soft neutral expression and muted warm colors, 3/4 top-down view, soft hand-drawn healing illustration style, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予角色、隐藏、保护、表达方式或其他个人意义。"
   },
@@ -336,7 +344,7 @@
     "id": "fantasy-treasure-chest",
     "name": "宝箱",
     "category": "幻想/怪物",
-    "placeholderSrc": "assets/placeholders/house.svg",
+    "placeholderSrc": "assets/generated/fantasy-treasure-chest.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small closed treasure chest with rounded wooden shape and muted gold details, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予珍藏、资源、秘密、期待或其他个人意义。"
   },
@@ -353,7 +361,7 @@
     "id": "emotion-flame",
     "name": "火焰",
     "category": "情绪符号",
-    "placeholderSrc": "assets/placeholders/sun.svg",
+    "placeholderSrc": "assets/generated/emotion-flame.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small gentle flame with warm orange and soft yellow shapes, not dangerous or harsh, 3/4 top-down view, soft hand-drawn healing illustration style, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予热量、动力、强烈感受、转化或其他个人意义。"
   },
@@ -370,7 +378,7 @@
     "id": "emotion-mirror",
     "name": "镜子",
     "category": "情绪符号",
-    "placeholderSrc": "assets/placeholders/water.svg",
+    "placeholderSrc": "assets/generated/emotion-mirror.png",
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small oval mirror with muted wooden frame and soft pale reflection, 3/4 top-down view, soft hand-drawn healing illustration style, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予看见自己、映照、距离、确认或其他个人意义。"
   },
@@ -382,5 +390,413 @@
     "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small empty wooden chair with simple rounded shape, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
     "symbolicNotes": "可被用户赋予等待、位置、缺席、邀请或其他个人意义。",
     "generatedBy": "OpenAI ImageGen built-in tool; sliced from generated sandplay asset atlas with chroma-key transparency removal"
+  },
+  {
+    "id": "person-couple",
+    "name": "情侣/伴侣",
+    "category": "家庭/关系",
+    "placeholderSrc": "assets/generated/person-couple.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: two adult partner figures standing side by side with gentle distance, simple facial features, neutral expressions, neither overly romantic nor dramatic, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予亲密关系、陪伴、距离、承诺、张力或其他个人意义。"
+  },
+  {
+    "id": "person-infant",
+    "name": "婴儿",
+    "category": "家庭/关系",
+    "placeholderSrc": "assets/generated/person-infant.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small swaddled infant figure resting peacefully, soft rounded blanket shape, simple face, calm and neutral expression, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予新生、脆弱、需要照看、开始、依恋或其他个人意义。"
+  },
+  {
+    "id": "person-caregiver",
+    "name": "照顾者",
+    "category": "家庭/关系",
+    "placeholderSrc": "assets/generated/person-caregiver.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a calm caregiver figure with open supportive posture holding a folded blanket, simple facial features, neutral warm clothing, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予照看、支持、责任、被照顾、保护或其他个人意义。"
+  },
+  {
+    "id": "animal-lion",
+    "name": "狮子",
+    "category": "动物",
+    "placeholderSrc": "assets/generated/animal-lion.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small lion miniature with soft rounded mane, steady posture, expressive but not aggressive face, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予力量、勇气、守护、威严、边界或其他个人意义。"
+  },
+  {
+    "id": "animal-snake",
+    "name": "蛇",
+    "category": "动物",
+    "placeholderSrc": "assets/generated/animal-snake.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small coiled snake miniature with gentle rounded body, visible head, calm non-threatening expression, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予警觉、转化、未知、距离、保护或其他个人意义。"
+  },
+  {
+    "id": "animal-fish",
+    "name": "鱼",
+    "category": "动物",
+    "placeholderSrc": "assets/generated/animal-fish.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small fish miniature with rounded fins and muted blue-green scales, peaceful swimming pose, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予流动、生命力、水中世界、自由、安静或其他个人意义。"
+  },
+  {
+    "id": "animal-butterfly",
+    "name": "蝴蝶",
+    "category": "动物",
+    "placeholderSrc": "assets/generated/animal-butterfly.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small butterfly miniature with softly patterned wings, muted warm and sage colors, wings open in a resting pose, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予变化、轻盈、美、短暂停留、希望或其他个人意义。"
+  },
+  {
+    "id": "animal-horse",
+    "name": "马",
+    "category": "动物",
+    "placeholderSrc": "assets/generated/animal-horse.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small horse miniature standing steadily, warm brown tones, simple friendly face, relaxed posture, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予行动、伙伴、力量、远行、承载或其他个人意义。"
+  },
+  {
+    "id": "animal-rabbit",
+    "name": "兔子",
+    "category": "动物",
+    "placeholderSrc": "assets/generated/animal-rabbit.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small sitting rabbit miniature with soft ears and rounded body, gentle alert posture, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予敏感、柔软、警觉、躲藏、生命力或其他个人意义。"
+  },
+  {
+    "id": "animal-owl",
+    "name": "猫头鹰",
+    "category": "动物",
+    "placeholderSrc": "assets/generated/animal-owl.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small owl miniature perched calmly, rounded body, large soft eyes, muted brown and cream tones, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予观察、夜晚、智慧、守望、安静或其他个人意义。"
+  },
+  {
+    "id": "animal-whale",
+    "name": "鲸鱼",
+    "category": "动物",
+    "placeholderSrc": "assets/generated/animal-whale.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small whale miniature with rounded blue-gray body and gentle tail curve, peaceful ocean feeling, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予深处、广阔、承载、温和力量、情绪空间或其他个人意义。"
+  },
+  {
+    "id": "vehicle-car",
+    "name": "小汽车",
+    "category": "交通/移动",
+    "placeholderSrc": "assets/generated/vehicle-car.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small simple car miniature with rounded body, muted clay red color, clear wheels, no brand markings, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予移动、日常、方向、控制、离开或其他个人意义。"
+  },
+  {
+    "id": "vehicle-bus",
+    "name": "公交车",
+    "category": "交通/移动",
+    "placeholderSrc": "assets/generated/vehicle-bus.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small bus miniature with rounded windows, muted warm yellow color, simple friendly shape, no text or numbers, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予集体、同行、通勤、等待、公共空间或其他个人意义。"
+  },
+  {
+    "id": "vehicle-train",
+    "name": "火车",
+    "category": "交通/移动",
+    "placeholderSrc": "assets/generated/vehicle-train.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small train engine miniature with two short cars, rounded edges, muted green and warm gray colors, no text, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予旅程、轨道、时间、远方、阶段或其他个人意义。"
+  },
+  {
+    "id": "vehicle-plane",
+    "name": "飞机",
+    "category": "交通/移动",
+    "placeholderSrc": "assets/generated/vehicle-plane.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small airplane miniature with rounded wings and soft off-white body, simple toy-like form, no logos, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予远方、离开、俯瞰、速度、愿望或其他个人意义。"
+  },
+  {
+    "id": "vehicle-boat",
+    "name": "小船",
+    "category": "交通/移动",
+    "placeholderSrc": "assets/generated/vehicle-boat.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small wooden boat miniature with gentle curved hull and one simple oar, warm muted brown tones, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予过渡、漂流、承载、靠岸、独行或其他个人意义。"
+  },
+  {
+    "id": "vehicle-bicycle",
+    "name": "自行车",
+    "category": "交通/移动",
+    "placeholderSrc": "assets/generated/vehicle-bicycle.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small bicycle miniature with simple rounded frame and two visible wheels, muted teal and warm gray colors, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予自主、平衡、轻便、练习、前进或其他个人意义。"
+  },
+  {
+    "id": "vehicle-ambulance",
+    "name": "救护车",
+    "category": "交通/移动",
+    "placeholderSrc": "assets/generated/vehicle-ambulance.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small ambulance-like rescue vehicle miniature with rounded form and a soft muted red cross-like symbol without text, gentle non-clinical styling, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予求助、照护、紧急、修复、被看见或其他个人意义。"
+  },
+  {
+    "id": "vehicle-wheelchair",
+    "name": "轮椅",
+    "category": "交通/移动",
+    "placeholderSrc": "assets/generated/vehicle-wheelchair.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small wheelchair miniature with rounded seat, two large wheels, warm gray and muted blue tones, respectful simple design, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予支持、限制、移动方式、被照顾、适应或其他个人意义。"
+  },
+  {
+    "id": "vehicle-raft",
+    "name": "木筏",
+    "category": "交通/移动",
+    "placeholderSrc": "assets/generated/vehicle-raft.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small raft miniature made of rounded wooden logs tied together with soft rope, warm natural colors, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予暂时承载、过渡、资源有限、漂流、求生或其他个人意义。"
+  },
+  {
+    "id": "vehicle-hot-air-balloon",
+    "name": "热气球",
+    "category": "交通/移动",
+    "placeholderSrc": "assets/generated/vehicle-hot-air-balloon.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small hot air balloon miniature with rounded muted fabric balloon and tiny basket, warm gentle colors, no patterns with text, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予上升、视野、轻盈、逃离、愿望或其他个人意义。"
+  },
+  {
+    "id": "daily-book",
+    "name": "书",
+    "category": "日常物品",
+    "placeholderSrc": "assets/generated/daily-book.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small closed book miniature with warm muted cover and slightly visible pages, no letters or symbols, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予知识、秘密、记忆、规则、故事或其他个人意义。"
+  },
+  {
+    "id": "daily-backpack",
+    "name": "书包",
+    "category": "日常物品",
+    "placeholderSrc": "assets/generated/daily-backpack.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small backpack miniature with rounded soft shape, muted fabric texture, simple straps, no logos, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予负担、准备、上学、离开、携带资源或其他个人意义。"
+  },
+  {
+    "id": "daily-bed",
+    "name": "床",
+    "category": "日常物品",
+    "placeholderSrc": "assets/generated/daily-bed.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small bed miniature with rounded wooden frame, soft blanket and pillow, warm calm colors, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予休息、安全、脆弱、恢复、私人空间或其他个人意义。"
+  },
+  {
+    "id": "daily-table",
+    "name": "桌子",
+    "category": "日常物品",
+    "placeholderSrc": "assets/generated/daily-table.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small simple table miniature with rounded corners and warm wooden surface, no objects on top, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予交流、工作、聚会、边界、承载或其他个人意义。"
+  },
+  {
+    "id": "daily-phone",
+    "name": "手机",
+    "category": "日常物品",
+    "placeholderSrc": "assets/generated/daily-phone.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small smartphone miniature with rounded dark screen and muted case, blank screen with no icons or text, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予联系、距离、信息、等待、打扰或其他个人意义。"
+  },
+  {
+    "id": "daily-computer",
+    "name": "电脑",
+    "category": "日常物品",
+    "placeholderSrc": "assets/generated/daily-computer.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small laptop computer miniature half open, muted warm gray color, blank screen with no text or icons, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予工作、学习、连接、压力、创造或其他个人意义。"
+  },
+  {
+    "id": "daily-clock",
+    "name": "钟表",
+    "category": "日常物品",
+    "placeholderSrc": "assets/generated/daily-clock.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small round clock miniature with simple hands but no numbers, muted cream face and warm frame, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予时间、等待、节奏、期限、循环或其他个人意义。"
+  },
+  {
+    "id": "daily-cup",
+    "name": "杯子",
+    "category": "日常物品",
+    "placeholderSrc": "assets/generated/daily-cup.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small ceramic cup miniature with rounded handle, muted warm color, empty inside, no decoration text, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予滋养、日常、空与满、陪伴、停顿或其他个人意义。"
+  },
+  {
+    "id": "daily-food-basket",
+    "name": "食物篮",
+    "category": "日常物品",
+    "placeholderSrc": "assets/generated/daily-food-basket.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small woven basket miniature with simple rounded bread and fruit shapes inside, warm muted colors, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予供给、照顾、分享、资源、满足或其他个人意义。"
+  },
+  {
+    "id": "daily-toy-blocks",
+    "name": "积木",
+    "category": "日常物品",
+    "placeholderSrc": "assets/generated/daily-toy-blocks.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small set of three toy blocks with rounded edges, muted primary-inspired colors, no letters or numbers, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予建构、童年、尝试、秩序、玩耍或其他个人意义。"
+  },
+  {
+    "id": "role-teacher",
+    "name": "老师",
+    "category": "社会角色",
+    "placeholderSrc": "assets/generated/role-teacher.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a teacher figure standing with a small blank notebook, simple facial features, neutral warm clothing, no blackboard or text, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予引导、规则、评价、学习、权威或其他个人意义。"
+  },
+  {
+    "id": "role-doctor",
+    "name": "医生",
+    "category": "社会角色",
+    "placeholderSrc": "assets/generated/role-doctor.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a doctor or healthcare helper figure with simple coat-like clothing and small bag, gentle non-clinical look, no medical text, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予照护、修复、求助、检查、专业支持或其他个人意义。"
+  },
+  {
+    "id": "role-police-officer",
+    "name": "警察",
+    "category": "社会角色",
+    "placeholderSrc": "assets/generated/role-police-officer.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a police officer figure in simplified muted uniform, calm posture, no weapon, no text or badge details, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予秩序、保护、规则、限制、安全或其他个人意义。"
+  },
+  {
+    "id": "role-friend-group",
+    "name": "朋友小组",
+    "category": "社会角色",
+    "placeholderSrc": "assets/generated/role-friend-group.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small group of three friend figures standing loosely together, varied warm clothing, neutral expressions, comfortable spacing, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予同伴、群体、归属、距离、支持或其他个人意义。"
+  },
+  {
+    "id": "role-lone-person",
+    "name": "独处的人",
+    "category": "社会角色",
+    "placeholderSrc": "assets/generated/role-lone-person.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a single seated person figure with calm neutral posture, simple facial features, muted clothing, neither sad nor happy, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予独处、等待、边界、安静、自我陪伴或其他个人意义。"
+  },
+  {
+    "id": "role-shopkeeper",
+    "name": "店主",
+    "category": "社会角色",
+    "placeholderSrc": "assets/generated/role-shopkeeper.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small shopkeeper figure with simple apron and a tiny blank counter element, warm neutral posture, no text, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予交换、供给、服务、日常关系、资源或其他个人意义。"
+  },
+  {
+    "id": "role-student",
+    "name": "学生",
+    "category": "社会角色",
+    "placeholderSrc": "assets/generated/role-student.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a student figure with small backpack and simple clothing, neutral expression, standing calmly, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予学习、成长、压力、同伴、探索或其他个人意义。"
+  },
+  {
+    "id": "role-helper",
+    "name": "帮手",
+    "category": "社会角色",
+    "placeholderSrc": "assets/generated/role-helper.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a helper figure holding a small tool pouch, open supportive stance, simple warm clothing, no specific profession symbols, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予协助、资源、修复、可靠、陪伴或其他个人意义。"
+  },
+  {
+    "id": "protection-shield",
+    "name": "盾牌",
+    "category": "保护/冲突",
+    "placeholderSrc": "assets/generated/protection-shield.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small rounded shield miniature with muted wood and warm metal tones, simple protective shape, no heraldic symbols or text, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予保护、防御、力量、边界、抵挡或其他个人意义。"
+  },
+  {
+    "id": "protection-rope-knot",
+    "name": "绳结",
+    "category": "保护/冲突",
+    "placeholderSrc": "assets/generated/protection-rope-knot.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small rope knot miniature made of soft tan cord, visible looped shape, calm neutral presentation, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予连接、束缚、约定、复杂、牵引或其他个人意义。"
+  },
+  {
+    "id": "protection-cage",
+    "name": "笼子",
+    "category": "保护/冲突",
+    "placeholderSrc": "assets/generated/protection-cage.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small empty rounded cage miniature with thin warm gray bars and open-looking space, not dark or threatening, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予限制、保护、困住、保留、距离或其他个人意义。"
+  },
+  {
+    "id": "protection-warning-sign",
+    "name": "警示牌",
+    "category": "保护/冲突",
+    "placeholderSrc": "assets/generated/protection-warning-sign.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small blank warning sign miniature on a short post, muted golden triangle-like shape without symbols, letters, or numbers, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予提醒、边界、风险、停顿、注意或其他个人意义。"
+  },
+  {
+    "id": "protection-broken-wall",
+    "name": "破损墙",
+    "category": "保护/冲突",
+    "placeholderSrc": "assets/generated/protection-broken-wall.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small broken wall segment miniature made of rounded warm stones, a visible gap in the middle, gentle non-dramatic style, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予破裂、缺口、变化、防护失效、通路或其他个人意义。"
+  },
+  {
+    "id": "protection-wooden-sword",
+    "name": "木剑",
+    "category": "保护/冲突",
+    "placeholderSrc": "assets/generated/protection-wooden-sword.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small toy-like wooden sword miniature with rounded blunt edges, warm wood color, non-threatening play object, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予行动、防卫、冲突、勇气、游戏或其他个人意义。"
+  },
+  {
+    "id": "ritual-candle",
+    "name": "蜡烛",
+    "category": "纪念/仪式",
+    "placeholderSrc": "assets/generated/ritual-candle.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small candle miniature with soft warm flame and simple cream wax body, gentle glow, no religious markings, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予纪念、照亮、愿望、安静、陪伴或其他个人意义。"
+  },
+  {
+    "id": "ritual-photo-frame",
+    "name": "相框",
+    "category": "纪念/仪式",
+    "placeholderSrc": "assets/generated/ritual-photo-frame.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small empty photo frame miniature with warm wooden frame and blank soft beige center, no image or text, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予记忆、关系、缺席、珍藏、回望或其他个人意义。"
+  },
+  {
+    "id": "abstract-key",
+    "name": "钥匙",
+    "category": "抽象符号",
+    "placeholderSrc": "assets/generated/abstract-key.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small old-fashioned key miniature with rounded handle and muted warm metal color, simple soft shape, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予开启、答案、权限、秘密、选择或其他个人意义。"
+  },
+  {
+    "id": "abstract-seed",
+    "name": "种子",
+    "category": "抽象符号",
+    "placeholderSrc": "assets/generated/abstract-seed.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small seed miniature with two tiny sprouting leaves, warm brown seed and muted green sprout, gentle centered shape, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予开始、潜力、等待、培育、希望或其他个人意义。"
+  },
+  {
+    "id": "abstract-spiral",
+    "name": "螺旋",
+    "category": "抽象符号",
+    "placeholderSrc": "assets/generated/abstract-spiral.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small spiral symbol miniature made of smooth clay-like material, soft rounded line, muted terracotta color, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予循环、深入、变化、回到中心、路径或其他个人意义。"
+  },
+  {
+    "id": "abstract-crack",
+    "name": "裂缝",
+    "category": "抽象符号",
+    "placeholderSrc": "assets/generated/abstract-crack.png",
+    "recommendedImagePrompt": "Create a single isolated sandplay miniature object: a small cracked ground miniature tile with warm stone texture and one soft visible crack line, not dramatic or dark, 3/4 top-down view, soft hand-drawn healing illustration style, low-saturation warm colors, transparent background, centered object, no text, no watermark, no harsh shadows, suitable as a draggable object on a virtual sand tray.",
+    "symbolicNotes": "可被用户赋予裂开、变化、脆弱、通气、边界松动或其他个人意义。"
   }
 ]
