@@ -6,7 +6,7 @@
 
 ## 最短使用流程
 
-![心理沙盘使用流程](./docs/readme-workflow.svg)
+![心理沙盘使用流程](./docs/readme-workflow.png)
 
 1. 双击打开 `index.html`。
 2. 在浏览器中选择沙具，拖拽或点击添加到中央沙盘。

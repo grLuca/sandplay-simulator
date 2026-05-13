@@ -8,7 +8,7 @@
 
 ## 最简单的使用方法
 
-![心理沙盒使用流程](./sandplay-interactive/docs/readme-workflow.svg)
+![心理沙盒使用流程](./sandplay-interactive/docs/readme-workflow.png)
 
 1. 双击打开 `sandplay-interactive/index.html`。
 2. 在浏览器里摆放沙具，并按需填写作品标题、当前心情、关键词和自述文本。
